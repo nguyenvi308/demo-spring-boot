@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+	<h1>This is home page</h1>
+
+	<a href="/app/login">Login</a>
+	<br>
+	<a href="/app/signup">Sign Up</a>
+	<a href="/app/add">Sign Up</a>
+
+
+
+
+	<div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+			<tr th:each="user : ${users}">
+				<td th:text="${user.name}">
+				<td th:text="${user.age}">
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
